@@ -16,7 +16,7 @@ export class SaudeMentalPage implements OnInit {
   ngOnInit() {
   }
 
-  cadastrar(nome, idade, saude, raca){
+  subscribe(nome, idade, saude, raca){
     this.pessoaService.insertPessoa(nome, idade, saude, raca);
   }
 
