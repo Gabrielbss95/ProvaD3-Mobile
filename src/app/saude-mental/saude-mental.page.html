@@ -11,21 +11,21 @@
 
 <ion-content>
  
-    <input type="text" [(ngModel)]="nome" placeholder="Nome"><br><br>
-    <input type="text" [(ngModel)]="idade"placeholder="Idade"><br><br>
+    <input type="text" [(ngModel)]="name" placeholder="Name"><br><br>
+    <input type="text" [(ngModel)]="age"placeholder="age"><br><br>
     Saude Mental<br>
-    <select  [(ngModel)]="saude" name="select">
+    <select  [(ngModel)]="health" name="select">
       <option value="1">1</option> 
       <option value="2" selected>2</option>
       <option value="3">3</option>
       <option value="4">4</option>
       <option value="5">5</option>
     </select><br><br>
-    <input type="text" [(ngModel)]="raca" placeholder="Raça"><br><br>
-    <button (click)="cadastrar(nome, idade, saude, raca)">Cadastrar</button><br><br><br><br><br>
+    <input type="text" [(ngModel)]="race" placeholder="Race"><br><br>
+    <button (click)="subscribe(name, age, health, race)">Subscribe</button><br><br><br><br><br>
     <input type="text" [(ngModel)]="idBusca" placeholder="Id para buscar">
-    <button (click)="buscarPorId(idBusca)">Search for id</button><br><br><br>
+    <button (click)="searchForId(idBusca)">Search for id</button><br><br><br>
     <input type="text" [(ngModel)]="corBusca" placeholder="Cor para buscar">
-    <button (click)="buscarPorCor(corBusca)">Search for race </button><br><br>
+    <button (click)="searchForColor(corBusca)">Search for race </button><br><br>
   
 </ion-content>
