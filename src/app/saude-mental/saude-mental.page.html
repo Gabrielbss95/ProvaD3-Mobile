@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>SaudeMental</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <center>
+    <input type="text" [(ngModel)]="nome" placeholder="Nome"><br><br>
+    <input type="text" [(ngModel)]="idade"placeholder="Idade"><br><br>
+    Saude Mental<br>
+    <select  [(ngModel)]="saude" name="select">
+      <option value="1">1</option> 
+      <option value="2" selected>2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select><br><br>
+    <input type="text" [(ngModel)]="raca" placeholder="Raça"><br><br>
+    <button (click)="cadastrar(nome, idade, saude, raca)">Cadastrar</button><br><br><br><br><br>
+
+    <input type="text" [(ngModel)]="idBusca" placeholder="Id para buscar">
+    <button (click)="buscarPorId(idBusca)">Busca por id</button><br><br><br>
+
+    <input type="text" [(ngModel)]="corBusca" placeholder="Cor para buscar">
+    <button (click)="buscarPorCor(corBusca)">Busca por cor</button><br><br>
+  </center>
+</ion-content>

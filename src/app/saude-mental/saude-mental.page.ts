@@ -1,0 +1,33 @@
+import { Component, OnInit } from '@angular/core';
+import {Pessoa} from '../pessoa'
+import {PessoasService} from '../pessoas.service'
+
+@Component({
+  selector: 'app-saude-mental',
+  templateUrl: './saude-mental.page.html',
+  styleUrls: ['./saude-mental.page.scss'],
+})
+export class SaudeMentalPage implements OnInit {
+
+  cadastros:Pessoa[];
+
+  constructor(private pessoaService:PessoasService) { 
+    this.cadastros = [];
+  }
+
+  ngOnInit() {
+  }
+
+  cadastrar(nome, idade, saude, raca){
+    this.pessoaService.insertPessoa(nome, idade, saude, raca);
+  }
+
+  buscarPorId(id){
+    this.pessoaService.buscarPorId(id);
+  }
+
+  buscarPorCor(cor){
+    this.pessoaService.buscarPorCor(cor);
+  }
+
+}
