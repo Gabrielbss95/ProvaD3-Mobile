@@ -9,10 +9,8 @@ import {PessoasService} from '../pessoas.service'
 })
 export class SaudeMentalPage implements OnInit {
 
-  cadastros:Pessoa[];
-
+ 
   constructor(private pessoaService:PessoasService) { 
-    this.cadastros = [];
   }
 
   ngOnInit() {
@@ -26,8 +24,8 @@ export class SaudeMentalPage implements OnInit {
     this.pessoaService.buscarPorId(id);
   }
 
-  buscarPorCor(cor){
-    this.pessoaService.buscarPorCor(cor);
+  buscarPorCor(color){
+    this.pessoaService.buscarPorCor(color);
   }
 
 }
