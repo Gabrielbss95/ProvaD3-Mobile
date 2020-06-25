@@ -16,15 +16,15 @@ export class SaudeMentalPage implements OnInit {
   ngOnInit() {
   }
 
-  subscribe(nome, idade, saude, raca){
-    this.pessoaService.insertPessoa(nome, idade, saude, raca);
+  subscribe(name, age, health, race){
+    this.pessoaService.insertPessoa(name, age, health, race);
   }
 
-  buscarPorId(id){
+  searchForId(id){
     this.pessoaService.buscarPorId(id);
   }
 
-  buscarPorCor(color){
+  searchForColor(color){
     this.pessoaService.buscarPorCor(color);
   }
 
